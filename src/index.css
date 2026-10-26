@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #174C35;
+  --color-forest-dark: #0F3323;
+  --color-forest-light: #1F5F43;
+  --color-agri: #2E7D32;
+  --color-agri-dark: #1B5E20;
+  --color-agri-light: #4CAF50;
+  --color-sage: #E8F3E5;
+  --color-sage-border: #D8E3D6;
+  --color-tomato: #E53935;
+  --color-tomato-hover: #C62828;
+  --color-dark-red: #C62828;
+  --color-cream: #F8F9F4;
+  --color-charcoal: #263238;
+  --color-muted: #607D8B;
+  --color-soft-pink: #FDECEC;
+  --color-border-card: #D8E3D6;
+
+  /* Aliases for backwards-compatibility */
+  --color-linen: #F8F9F4;
+  --color-linen-surface: #FFFFFF;
+  --color-olive: #2E7D32;
+  --color-olive-dark: #174C35;
+  --color-bark: #263238;
+  --color-bark-muted: #607D8B;
+  --color-sand: #D8E3D6;
+  --color-sand-light: #F8F9F4;
+  --color-sand-dark: #C5D4C3;
+  --color-terracotta: #E53935;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --radius-control: 8px;
+  --radius-card: 12px;
+}
+
+:root {
+  /* Official Design System Tokens */
+  --forest-green: #174C35;
+  --agri-green: #2E7D32;
+  --sage-light: #E8F3E5;
+  --tomato-red: #E53935;
+  --tomato-hover: #C62828;
+  --dark-red: #C62828;
+  --cream: #F8F9F4;
+  --white: #FFFFFF;
+  --charcoal: #263238;
+  --muted-gray: #607D8B;
+  --soft-pink: #FDECEC;
+  --border-color: #D8E3D6;
+
+  /* Semantic Mappings */
+  --bg-page: #F8F9F4;
+  --bg-card: #FFFFFF;
+  --text-primary: #263238;
+  --text-secondary: #607D8B;
+
+  /* Legacy token fallbacks safely remapped to new palette */
+  --tomato: #E53935;
+  --linen: #F8F9F4;
+  --linen-surface: #FFFFFF;
+  --olive: #2E7D32;
+  --olive-dark: #174C35;
+  --sage: #E8F3E5;
+  --sage-dark: #2E7D32;
+  --terracotta: #E53935;
+  --terracotta-hover: #C62828;
+  --bark: #263238;
+  --bark-muted: #607D8B;
+  --bark-light: #78909C;
+  --sand: #D8E3D6;
+  --sand-light: #F8F9F4;
+  --sand-dark: #C5D4C3;
+
+  color-scheme: light;
+}
+
+/* Base Body Styles */
+body {
+  background-color: var(--cream);
+  color: var(--charcoal);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Modern Professional Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  color: var(--charcoal);
+  letter-spacing: -0.015em;
+}
+
+/* Smooth transitions */
+button, input, select, textarea, a {
+  transition: all 0.15s ease-in-out;
+}
+
+/* Focus styles matching palette */
+input:focus, select:focus, textarea:focus, button:focus-visible {
+  outline: 2px solid var(--agri-green);
+  outline-offset: 2px;
+}
+
+/* Crisp agricultural dashboard shadows */
+.agri-card-shadow {
+  box-shadow: 0 1px 3px 0 rgba(23, 76, 53, 0.05), 0 1px 2px -1px rgba(23, 76, 53, 0.04);
+}
+
+.agri-elevated-shadow {
+  box-shadow: 0 4px 16px -2px rgba(23, 76, 53, 0.08), 0 2px 4px -2px rgba(23, 76, 53, 0.04);
+}
